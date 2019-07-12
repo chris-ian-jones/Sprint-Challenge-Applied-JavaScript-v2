@@ -20,7 +20,22 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(data => {
-        console.log('API call ok', data.data.articles)
+        // console.log('API call ok', data.data.articles)
+        const emptyArray = []
+        articleByTopicObject = data.data.articles
+        // console.log(articleByTopicObject)
+        const arrayOfObjects = Object.values(articleByTopicObject)
+        arrayOfObjects.forEach(data => {
+            data.forEach(array => {
+                emptyArray.push(array)
+            })
+        })
+        console.log(emptyArray)
+
+
+
+        
+        
         
     })
     .catch(data => {
