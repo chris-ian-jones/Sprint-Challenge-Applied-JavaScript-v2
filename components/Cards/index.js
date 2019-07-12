@@ -26,9 +26,9 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         // create an new empty array called 'arrayOfAllArticleObjects'
         const arrayOfAllArticleObjects = []
         // assign the data from api to object
-        articleByTopicObject = data.data.articles
+        articlesByTopicObject = data.data.articles
         // assign just the values from objects to new array
-        const arrayOfObjectsValues = Object.values(articleByTopicObject)
+        const arrayOfObjectsValues = Object.values(articlesByTopicObject)
         
         // nested iterations, to iterate over each item in array of array of objects
         // then for each item in array, push each object into 'arrayOfAllArticleObjects'
