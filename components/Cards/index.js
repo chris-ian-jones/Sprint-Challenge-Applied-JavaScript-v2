@@ -26,3 +26,34 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .catch(data => {
         console.log("Error message for 'Cards/Articles' API call")
     })
+
+
+
+function Article() {
+    const articleCard = document.createElement('div')
+    const articleHeadline = document.createElement('div')
+    const articleAuthor = document.createElement('div')
+    const articleImageContainer = document.createElement('div')
+    const articleImage = document.createElement('img')
+    const articleByAuthor = document.createElement('span')
+
+    articleCard.classList.add('card')
+    articleHeadline.classList.add('headline')
+    articleAuthor.classList.add('author')
+    articleImageContainer.classList.add('img-container')
+    
+    // articleImage.src = ''
+    articleByAuthor.textContent = `By authors name`
+
+    articleCard.appendChild(articleHeadline)
+    articleCard.appendChild(articleAuthor)
+    articleAuthor.appendChild(articleImageContainer)
+    articleImageContainer.appendChild(articleImage)
+    articleAuthor.appendChild(articleByAuthor)
+
+    return articleCard
+} 
+
+let newArticle = Article()
+console.log(newArticle)
+
