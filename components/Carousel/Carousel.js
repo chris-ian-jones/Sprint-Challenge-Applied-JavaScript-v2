@@ -57,7 +57,7 @@ mainCarouselContainer.appendChild(newCarousel)
 const carouselImages = mainCarouselContainer.querySelectorAll('img')
 
 let imageIndex = 0
-
+let indexLastImage = carouselImages.length - 1
 carouselImages[imageIndex].style.display = 'block'
 
 
@@ -65,16 +65,28 @@ function clickLeftButton() {
   carouselImages.forEach(item => {
     item.style.display = 'none'
   })
-  imageIndex = imageIndex - 1
-  carouselImages[imageIndex].style.display = 'block'
+
+  if (imageIndex === 0) {
+    imageIndex = indexLastImage
+    carouselImages[imageIndex].style.display = 'block'
+  } else {
+    imageIndex = imageIndex - 1
+    carouselImages[imageIndex].style.display = 'block'
+  }
 }
 
 function clickRightButton() {
   carouselImages.forEach(item => {
     item.style.display = 'none'
   })
-  imageIndex = imageIndex + 1
-  carouselImages[imageIndex].style.display = 'block'
+
+  if (imageIndex === indexLastImage) {
+    imageIndex = 0
+    carouselImages[imageIndex].style.display = 'block'
+  } else {
+    imageIndex = imageIndex + 1
+    carouselImages[imageIndex].style.display = 'block'
+  }
 }
 
 
