@@ -18,7 +18,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
         })
     })
     .catch(data => {
-        console.log('call is bad')
+        console.log("Error message for 'Tabs' API call")
     })
 
 function Tab(topic) {
