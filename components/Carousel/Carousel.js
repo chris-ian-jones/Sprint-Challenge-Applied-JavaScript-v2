@@ -54,12 +54,27 @@ const mainCarouselContainer = document.querySelector('.carousel-container')
 
 mainCarouselContainer.appendChild(newCarousel)
 
+const carouselImages = mainCarouselContainer.querySelectorAll('img')
+
+let imageIndex = 0
+
+carouselImages[imageIndex].style.display = 'block'
+
+
 function clickLeftButton() {
-  console.log('click left')
+  carouselImages.forEach(item => {
+    item.style.display = 'none'
+  })
+  imageIndex = imageIndex - 1
+  carouselImages[imageIndex].style.display = 'block'
 }
 
 function clickRightButton() {
-  console.log('click right')
+  carouselImages.forEach(item => {
+    item.style.display = 'none'
+  })
+  imageIndex = imageIndex + 1
+  carouselImages[imageIndex].style.display = 'block'
 }
 
 
