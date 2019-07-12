@@ -68,11 +68,9 @@ function Article(object) {
     articleImageContainer.appendChild(articleImage)
     articleAuthor.appendChild(articleByAuthor)
 
-
-
     return articleCard
 } 
 
-let newArticle = Article()
-console.log(newArticle)
+// let newArticle = Article()
+// console.log(newArticle)
 
